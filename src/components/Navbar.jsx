@@ -1,10 +1,12 @@
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
-import { Badge } from "@mui/icons-material";
+import { Badge } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
+import logo from "../Images/logo.JPG";
 
 const Container = styled.div`
   height: 20px;
+  margin-bottom: 2rem;
 `;
 
 const Wrapper = styled.div`
@@ -36,6 +38,9 @@ const Input = styled.input`
 const Center = styled.div`
   flex: 1;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const Right = styled.div`
   flex: 1;
@@ -46,6 +51,12 @@ const Right = styled.div`
 
 const Logo = styled.h2`
   font-weight: bold;
+`;
+
+const LogoImg = styled.img`
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 `;
 const MenuItem = styled.div`
   font-size: 14px;
@@ -61,10 +72,11 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search style={{color: "gray", fontSize: 16}}/>
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
+          <LogoImg src={logo} />
           <Logo>Cynks Kollection</Logo>
         </Center>
         <Right>

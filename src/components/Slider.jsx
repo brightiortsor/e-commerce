@@ -9,8 +9,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  //background-color: #62cccb;
-  margin-top: 2em;
+  margin-top: 4em;
   overflow: hidden;
 `;
 
