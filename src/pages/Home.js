@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import FlashSales from "../components/FlashSales";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";
 import Products from "../components/Products";
@@ -10,7 +9,6 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
-      <FlashSales />
       <Navbar />
       <Slider />
       <Categories />

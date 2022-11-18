@@ -54,6 +54,7 @@ const Center = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 `;
 
 const List = styled.ul`
@@ -68,6 +69,7 @@ const ListItem = styled.li`
   width: 50%;
   margin-bottom: 20px;
   cursor: pointer;
+  font-family: Cochin;
 `;
 
 const Right = styled.div`
@@ -78,11 +80,13 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  font-family: Cochin;
 `;
 
 const Payment = styled.img`
   width: 50%;
   cursor: pointer;
+  margin-left: -10px;
 `;
 const Footer = () => {
   return (
@@ -105,6 +109,7 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
+          <ListItem>Home</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Cart</ListItem>
           <ListItem>Dresses</ListItem>
@@ -112,7 +117,6 @@ const Footer = () => {
           <ListItem>Bags</ListItem>
           <ListItem>Accessories</ListItem>
           <ListItem>T & C</ListItem>
-          <ListItem>Home</ListItem>
         </List>
       </Center>
       <Right>

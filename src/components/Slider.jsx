@@ -7,9 +7,9 @@ import { SlideData } from "../pages/Data";
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
-  margin-top: 4em;
+  margin-top: 5rem;
   overflow: hidden;
 `;
 
@@ -83,9 +83,9 @@ const Slider = () => {
 
   const handleClick = (direction) => {
     if (direction === "left") {
-      setSlides(slides > 0 ? slides - 1 : 0);
+      setSlides(slides > 0 ? slides - 1 : 3);
     } else {
-      setSlides(slides < 3 ? slides + 1 : 3);
+      setSlides(slides < 3 ? slides + 1 : 0);
     }
   };
   return (

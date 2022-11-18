@@ -28,8 +28,7 @@ justify-content: center;
 `;
 
 const Title = styled.h2`
-color: white;
-border: 1px solid white;
+color: #0e0b0b;
 margin-bottom: 20px;
 padding: 2px;
 `;
@@ -39,9 +38,13 @@ border: none;
 padding: 10px;
 font-weight: 500;
 background-color: #2b2727;
-
 color: white;
+border-radius: 5px;
 cursor: pointer;
+transition: all 0.5s ease;
+&:hover{
+  transform: scale(1.1);
+}
 `;
 
 const CategoryItem = ({item}) => {

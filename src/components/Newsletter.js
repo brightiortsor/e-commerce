@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: #fcf5f5;
-  height: 60vh;
+  height: 40vh;
 `;
 const Title = styled.h2`
   font-size: 3rem;

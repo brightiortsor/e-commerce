@@ -5,8 +5,7 @@ import styled from "styled-components";
 import logo from "../Images/logo.JPG";
 
 const Container = styled.div`
-  height: 20px;
-  margin-bottom: 2rem;
+  height: 15px;
 `;
 
 const Wrapper = styled.div`
@@ -14,6 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #99a8a8;
 `;
 const Left = styled.div`
   flex: 1;
@@ -23,9 +23,11 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  font-family: Cambria, serif;
 `;
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   margin-left: 25px;
@@ -34,6 +36,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
   outline: none;
   border: none;
+  background-color: #99a8a8;
 `;
 const Center = styled.div`
   flex: 1;
@@ -51,17 +54,20 @@ const Right = styled.div`
 
 const Logo = styled.h2`
   font-weight: bold;
+  font-family: Cambria, serif;
+
 `;
 
 const LogoImg = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 `;
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  font-family: Cambria, serif;
 `;
 
 const Navbar = () => {
@@ -72,18 +78,18 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+            <Search style={{ color: "lightgray", fontSize: 16, }} />
           </SearchContainer>
         </Left>
         <Center>
-          <LogoImg src={logo} />
-          <Logo>Cynks Kollection</Logo>
+          {/* <LogoImg src={logo} /> */}
+          <Logo>CynksKollection</Logo>
         </Center>
         <Right>
           <MenuItem>SIGN UP</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={3} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
