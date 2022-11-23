@@ -25,6 +25,7 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({display: "none"})}
 `;
 
 const SearchContainer = styled.div`
@@ -47,13 +48,14 @@ const Center = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({marginLeft: "10px", fontSize: "16px"})}
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({flex: "2", justifyContent: "center"})}
+  ${mobile({flex: "3", justifyContent: "space-evenly", alignItems: "center", marginTop: "2px"})}
 `;
 
 const Logo = styled.h2`

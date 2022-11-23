@@ -10,7 +10,7 @@ const Container = styled.div`
   background-color: #fcf5f5;
   height: 40vh;
   margin-bottom: 1rem;
-  ${mobile({ height: "20vh" })}
+  ${mobile({ height: "20vh", marginTop: "3rem" })}
 `;
 const Title = styled.h2`
   font-size: 3rem;

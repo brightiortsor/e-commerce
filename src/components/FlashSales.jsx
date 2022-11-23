@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../MediaQuery";
 
 const Container = styled.div`
   height: 30px;
@@ -10,14 +11,15 @@ const Container = styled.div`
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
+  ${mobile({marginTop: "2.5rem", marginBottom: "-3rem"})}
 `;
 
-const Hero = () => {
+const FlashSales = () => {
   return (
     <Container>
-      December Flash Sales! Get upto 30% off on some products.
+      December Flash Sales! Get upto 5% off.
     </Container>
   );
 };
 
-export default Hero;
+export default FlashSales;
