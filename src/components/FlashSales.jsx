@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
-  ${mobile({marginTop: "2.5rem", marginBottom: "-3rem"})}
+  ${mobile({marginTop: "2.8rem", marginBottom: "-3rem"})}
 `;
 
 const FlashSales = () => {
