@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../MediaQuery";
 
 const Container = styled.div`
   width: 100vw;
@@ -19,6 +20,7 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 30px;
   background: #fff;
+  ${mobile({ width: "75%" })}
 `;
 const Title = styled.h1`
   font-size: 1.5rem;
@@ -48,6 +50,7 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  ${mobile({ width: "75%" })}
 `;
 const Register = () => {
   return (

@@ -2,11 +2,13 @@ import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { mobile } from "../MediaQuery";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 40px;
   margin-top: 2rem;
+  ${mobile({ padding: "5px", marginTop: "2.5rem" })}
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -29,7 +31,9 @@ const TopButton = styled.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: "none" })}
+`;
 
 const Text = styled.span`
   text-decoration: underline;
@@ -41,6 +45,7 @@ const Bottom = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -50,6 +55,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -98,14 +104,17 @@ const PriceContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  ${mobile({ marginTop: "1rem" })}
 `;
 const Amount = styled.div`
   font-size: 1.5rem;
   margin: 5px;
+  ${mobile({ margin: "5px 15px" })}
 `;
 const ProductPrice = styled.div`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 200;
+  ${mobile({ marginBottom: "10px", fontSize: "2rem" })}
 `;
 
 const Hr = styled.hr`
@@ -116,6 +125,33 @@ const Hr = styled.hr`
 `;
 const Summary = styled.div`
   flex: 1;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+`;
+
+const SummaryTitle = styled.h2`
+  font-weight: 200;
+  ${mobile({ fontSize: "2.5rem" })}
+`;
+const SummaryItem = styled.div`
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "500"};
+  font-size: ${(props) => props.type === "total" && "24px"};
+`;
+const ItemText = styled.span``;
+const ItemPrice = styled.span``;
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  cursor: pointer;
 `;
 
 const Cart = () => {
@@ -126,12 +162,12 @@ const Cart = () => {
         <Title>MY CART</Title>
         {/* Continue and Stop shopping buttons */}
         <Top>
-          <TopButton>Continue Shopping</TopButton>
+          <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
             <Text>Shopping Bag (3)</Text>
             <Text>Wishlist (1)</Text>
           </TopTexts>
-          <TopButton type="filled">Checkout Now</TopButton>
+          <TopButton type="filled">CHECKOUT NOW</TopButton>
         </Top>
 
         {/* product details container */}
@@ -177,7 +213,7 @@ const Cart = () => {
                   </ProdId>
                   <ProdColor color="#bf3b65" />
                   <ProdSize>
-                    <b>Size:</b> 29
+                    <b>Size:</b> M
                   </ProdSize>
                 </Details>
               </ProductDetail>
@@ -193,7 +229,26 @@ const Cart = () => {
           </Info>
 
           {/* Summary of shopped items */}
-          <Summary></Summary>
+          <Summary>
+            <SummaryTitle>Order Summary</SummaryTitle>
+            <SummaryItem>
+              <ItemText>Subtotal</ItemText>
+              <ItemPrice>N399,999</ItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <ItemText>Shipping Fee</ItemText>
+              <ItemPrice>N9,999</ItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <ItemText>Shipping Discount</ItemText>
+              <ItemPrice>- N9,999</ItemPrice>
+            </SummaryItem>
+            <SummaryItem type="total">
+              <ItemText>Total</ItemText>
+              <ItemPrice>N390,000</ItemPrice>
+            </SummaryItem>
+            <Button>BUY NOW</Button>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />

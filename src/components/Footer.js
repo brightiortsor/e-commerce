@@ -8,15 +8,27 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import logo from "../Images/logo.JPG";
+import { mobile } from "../MediaQuery";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({
+    flexDirection: "column",
+    backgroundColor: "#f5f4f2",
+    marginTop: "1.5rem",
+  })}
 `;
 const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  ${mobile({
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "5px;",
+    fontSize: "12px",
+  })}
 `;
 
 const Image = styled.img`
@@ -46,10 +58,16 @@ const Icons = styled.div`
   align-items: center;
   justify-content: center;
   margin: 1.5rem 1rem 0 0;
+  ${mobile({
+    width: "25px",
+    height: "25px",
+    margin: "1.5rem",
+  })}
 `;
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -75,18 +93,27 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "5px;",
+  })}
 `;
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   font-family: Cochin;
+  ${mobile({ fontSize: "12px" })}
 `;
 
 const Payment = styled.img`
   width: 50%;
   cursor: pointer;
   margin-left: -10px;
+  ${mobile({ display: "none" })}
 `;
 const Footer = () => {
   return (
@@ -96,13 +123,13 @@ const Footer = () => {
         <Desc>...simply elegant.</Desc>
         <Socials>
           <Icons color="#3b5999">
-            <Facebook />
+            <Facebook style={{ width: "20px" }} />
           </Icons>
           <Icons color="#e4405f">
-            <Instagram />
+            <Instagram style={{ width: "20px" }} />
           </Icons>
           <Icons color="green">
-            <WhatsApp />
+            <WhatsApp style={{ width: "20px" }} />
           </Icons>
         </Socials>
       </Left>
@@ -122,13 +149,18 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "5px" }} /> Abuja, 90011, Nigeria.
+          <Room style={{ marginRight: "5px", width: "20px" }} /> Abuja, 90011,
+          Nigeria.
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: "5px" }} /> +234 700 200 300
+          <Phone style={{ marginRight: "20px", width: "20px" }} /> +234 700 200
+          300
         </ContactItem>
         <ContactItem>
-          <Email style={{ marginRight: "5px" }} /> cynkskollection@support.com
+          <Email
+            style={{ marginRight: "5px", marginLeft: "45px", width: "20px" }}
+          />
+          cynkskollection@support.com
         </ContactItem>
         <Payment src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxzIRvWljJpyBTpNZbTUewlZ8CeI7lxxqUQ&usqp=CAU" />
       </Right>

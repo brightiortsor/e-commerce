@@ -1,11 +1,16 @@
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
+import { red } from "@mui/material/colors";
 import React from "react";
 import styled from "styled-components";
 import logo from "../Images/logo.JPG";
+import { mobile } from "../MediaQuery";
+
 
 const Container = styled.div`
   height: 15px;
+  ${mobile({height: "10px"})}
+ 
 `;
 
 const Wrapper = styled.div`
@@ -14,29 +19,27 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #99a8a8;
+  ${mobile({padding: "10px 0"})}
 `;
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
 `;
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  font-family: Cambria, serif;
-`;
+
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  margin-left: 25px;
   padding: 5px;
+  ${mobile({margin: "5px", padding: "2px"})}
 `;
 const Input = styled.input`
   outline: none;
   border: none;
   background-color: #99a8a8;
+  ${mobile({width: "50px"})}
 `;
 const Center = styled.div`
   flex: 1;
@@ -50,12 +53,13 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({flex: "2", justifyContent: "center"})}
 `;
 
 const Logo = styled.h2`
   font-weight: bold;
   font-family: Cambria, serif;
-
+  ${mobile({fontSize: "18px"})}
 `;
 
 const LogoImg = styled.img`
@@ -68,6 +72,7 @@ const MenuItem = styled.div`
   cursor: pointer;
   margin-left: 25px;
   font-family: Cambria, serif;
+  ${mobile({fontSize: "12px", marginLeft: "7px"})}
 `;
 
 const Navbar = () => {
@@ -75,9 +80,8 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search"/>
             <Search style={{ color: "lightgray", fontSize: 16, }} />
           </SearchContainer>
         </Left>
@@ -88,8 +92,8 @@ const Navbar = () => {
         <Right>
           <MenuItem>SIGN UP</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={3} color="primary">
+          <MenuItem >
+            <Badge badgeContent={3} color="primary" >
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>

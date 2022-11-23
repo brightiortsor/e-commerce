@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { mobile } from "../MediaQuery";
 
 const Container = styled.div`
 flex: 1;
 margin: 2px 5px;
 height: 40vh;
 position: relative;
+${mobile({marginTop: "2.5rem", padding: "0 5px"})}
 `;
 
 const Image = styled.img`
@@ -12,7 +14,9 @@ width: 100%;
 height: 100%;
 object-fit:cover;
 opacity: 0.8;
+border: 2px solid lightgray;
 border-radius: 10px;
+${mobile({height: "30vh"})}
 `;
 
 const Info = styled.div`

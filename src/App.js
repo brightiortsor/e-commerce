@@ -4,6 +4,7 @@ import ProductList from "./pages/ProductList";
 import SingleProduct from "./pages/SingleProduct";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import Register from "./pages/Register";
 
 function App() {
   return (

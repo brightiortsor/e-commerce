@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import { mobile } from "../MediaQuery";
 import { SlideData } from "../pages/Data";
 
 const Container = styled.div`
@@ -11,6 +12,7 @@ const Container = styled.div`
   display: flex;
   margin-top: 5rem;
   overflow: hidden;
+  ${mobile({display: "none"})}
 `;
 
 const Arrow = styled.div`
