@@ -1,7 +1,6 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import { mobile } from "../MediaQuery";
 
 const Container = styled.div``;
