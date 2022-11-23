@@ -3,8 +3,10 @@ import { Badge } from "@mui/material";
 import { red } from "@mui/material/colors";
 import React from "react";
 import styled from "styled-components";
-import logo from "../Images/logo.JPG";
+//import logo from "../Images/logo.JPG";
 import { mobile } from "../MediaQuery";
+import { Link } from "react-router-dom";
+import Register from "../pages/Register";
 
 
 const Container = styled.div`
@@ -62,18 +64,16 @@ const Logo = styled.h2`
   ${mobile({fontSize: "18px"})}
 `;
 
-const LogoImg = styled.img`
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-`;
+
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
   font-family: Cambria, serif;
+ 
   ${mobile({fontSize: "12px", marginLeft: "7px"})}
 `;
+
 
 const Navbar = () => {
   return (
@@ -86,15 +86,22 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          {/* <LogoImg src={logo} /> */}
           <Logo>CynksKollection</Logo>
         </Center>
         <Right>
-          <MenuItem>SIGN UP</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+        <Link to="/" className="link-item">
+          <MenuItem >HOME</MenuItem>
+          </Link>
+          <Link to="/register" className="link-item">
+          <MenuItem >SIGN UP</MenuItem>
+          </Link>
+         <Link to="/login" className="link-item">
+         <MenuItem>SIGN IN</MenuItem>
+         </Link>
+          
           <MenuItem >
-            <Badge badgeContent={3} color="primary" >
-              <ShoppingCartOutlined />
+            <Badge badgeContent={2} color="primary" >
+             <Link to="/mycart" className="link-item"><ShoppingCartOutlined /></Link> 
             </Badge>
           </MenuItem>
         </Right>

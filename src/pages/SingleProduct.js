@@ -100,7 +100,6 @@ const Button = styled.button`
 const SingleProduct = () => {
   return (
     <Container>
-      <Navbar />
       <Wrapper>
         <ImgContainer>
           <Image src="https://media.istockphoto.com/id/1317904826/photo/short-sleeve-hooded-sweatshirt-mockup-for-print-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=E2e7bC6kXMheEiy3kni0JFtZPW6AePLU7jPiNnOOfx4=" />

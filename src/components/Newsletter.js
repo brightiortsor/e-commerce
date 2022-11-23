@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   background-color: #fcf5f5;
   height: 40vh;
+  margin-bottom: 1rem;
   ${mobile({ height: "20vh" })}
 `;
 const Title = styled.h2`

@@ -4,6 +4,7 @@ import { mobile } from "../MediaQuery";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  margin-top: 3rem;
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)

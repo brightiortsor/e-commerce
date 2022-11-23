@@ -1,6 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../MediaQuery";
 import { SlideData } from "../pages/Data";
@@ -10,7 +11,7 @@ const Container = styled.div`
   width: 100%;
   height: 80vh;
   display: flex;
-  margin-top: 5rem;
+  margin: 3rem 0 1rem 0;
   overflow: hidden;
   ${mobile({display: "none"})}
 `;
@@ -104,7 +105,10 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
+              <Link to="/productlist">
               <Button>SHOP NOW</Button>
+              </Link>
+              
             </InfoContainer>
           </Slide>
         ))}

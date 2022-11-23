@@ -1,4 +1,15 @@
 * {
   margin: 0;
-  font-family: 'Urbanist', 'Cookie', sans-serif;
+  font-family: "Urbanist", "Cookie", sans-serif;
+}
+
+.link-item {
+  color: rgb(82, 75, 75);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.link-item:hover {
+  color: black;
 }

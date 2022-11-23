@@ -157,9 +157,7 @@ const Footer = () => {
           300
         </ContactItem>
         <ContactItem>
-          <Email
-            style={{ marginRight: "5px", marginLeft: "45px", width: "20px" }}
-          />
+          <Email style={{ marginRight: "5px", width: "20px" }} />
           cynkskollection@support.com
         </ContactItem>
         <Payment src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGxzIRvWljJpyBTpNZbTUewlZ8CeI7lxxqUQ&usqp=CAU" />

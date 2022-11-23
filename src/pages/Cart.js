@@ -157,7 +157,6 @@ const Button = styled.button`
 const Cart = () => {
   return (
     <Container>
-      <Navbar />
       <Wrapper>
         <Title>MY CART</Title>
         {/* Continue and Stop shopping buttons */}
