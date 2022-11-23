@@ -1,12 +1,10 @@
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
-import { red } from "@mui/material/colors";
 import React from "react";
 import styled from "styled-components";
 //import logo from "../Images/logo.JPG";
 import { mobile } from "../MediaQuery";
 import { Link } from "react-router-dom";
-import Register from "../pages/Register";
 
 
 const Container = styled.div`
