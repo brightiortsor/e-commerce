@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobile } from "../MediaQuery";
+import { landscape, mobile } from "../MediaQuery";
 
 const Container = styled.div`
   width: 100vw;
@@ -22,10 +22,12 @@ const Wrapper = styled.div`
   padding: 30px;
   background: #fff;
   ${mobile({ width: "75%" })}
+  ${landscape({ width: "50%" })}
 `;
 const Title = styled.h1`
   font-size: 1.5rem;
   font-weight: 400;
+  ${landscape({ margin: "1.5rem 0", fontSize: "2rem" })}
 `;
 const Form = styled.form`
   display: flex;
@@ -38,6 +40,7 @@ const Input = styled.input`
   padding: 10px;
   outline: none;
   font-size: 14px;
+  ${landscape({ fontSize: "20px" })}
 `;
 
 const Button = styled.button`
@@ -57,6 +60,7 @@ const Link = styled.a`
   text-decoration: underline;
   margin-right: 5px;
   cursor: pointer;
+  ${landscape({ fontSize: "1.5rem" })}
 `;
 const Login = () => {
   return (

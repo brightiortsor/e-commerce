@@ -2,14 +2,14 @@ import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-//import logo from "../Images/logo.JPG";
-import { mobile } from "../MediaQuery";
+import { landscape, mobile, tablet } from "../MediaQuery";
 import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
   height: 15px;
   ${mobile({height: "10px"})}
+  ${tablet({height: "15px"})}
  
 `;
 
@@ -26,6 +26,8 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   ${mobile({display: "none"})}
+  ${tablet({display: "none"})}
+  ${landscape({display: "none"})}
 `;
 
 const SearchContainer = styled.div`
@@ -49,6 +51,8 @@ const Center = styled.div`
   align-items: center;
   justify-content: center;
   ${mobile({marginLeft: "10px", fontSize: "16px"})}
+  ${tablet({marginLeft: "-4rem", fontSize: "14px"})}
+  ${landscape({marginLeft: "-7rem", fontSize: "16px"})}
 `;
 const Right = styled.div`
   flex: 1;
@@ -56,6 +60,7 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   ${mobile({flex: "3", justifyContent: "space-evenly", alignItems: "center", marginTop: "2px"})}
+  
 `;
 
 const Logo = styled.h2`
@@ -72,6 +77,8 @@ const MenuItem = styled.div`
   font-family: Cambria, serif;
  
   ${mobile({fontSize: "12px", marginLeft: "7px"})}
+  ${tablet({fontSize: "14px"})}
+  ${landscape({fontSize: "16px"})}
 `;
 
 

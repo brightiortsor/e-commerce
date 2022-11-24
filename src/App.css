@@ -13,3 +13,10 @@
 .link-item:hover {
   color: black;
 }
+
+.shop--now {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s;
+}

@@ -8,7 +8,7 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import logo from "../Images/logo.JPG";
-import { mobile } from "../MediaQuery";
+import { mobile, tablet } from "../MediaQuery";
 
 const Container = styled.div`
   display: flex;
@@ -68,6 +68,7 @@ const Center = styled.div`
   flex: 1;
   padding: 20px;
   ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -114,6 +115,7 @@ const Payment = styled.img`
   cursor: pointer;
   margin-left: -10px;
   ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `;
 const Footer = () => {
   return (

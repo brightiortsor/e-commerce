@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { mobile } from "../MediaQuery";
+import { landscape, mobile, tablet } from "../MediaQuery";
 
 const Container = styled.div`
 flex: 1;
 margin: 2px 5px;
 height: 40vh;
 position: relative;
-${mobile({marginTop: "2.5rem", padding: "0 5px"})}
+${mobile({marginTop: "2.5rem", marginRight:".5rem", padding: "0 5px"})}
 `;
 
 const Image = styled.img`
@@ -17,6 +18,8 @@ opacity: 0.8;
 border: 2px solid lightgray;
 border-radius: 10px;
 ${mobile({height: "30vh"})}
+${tablet({height: "50vh"})}
+${landscape({height: "60vh"})}
 `;
 
 const Info = styled.div`
@@ -35,6 +38,8 @@ const Title = styled.h2`
 color: #0e0b0b;
 margin-bottom: 20px;
 padding: 2px;
+${tablet({fontSize: "2rem"})}
+${landscape({fontSize: "2.5rem"})}
 `;
 
 const Button = styled.button`
@@ -49,6 +54,8 @@ transition: all 0.5s ease;
 &:hover{
   transform: scale(1.1);
 }
+${tablet({width: "50%", padding: "10px", fontSize: "1rem"})}
+${landscape({width: "50%", padding: "10px", fontSize: "1.4rem"})}
 `;
 
 const CategoryItem = ({item}) => {
@@ -57,7 +64,8 @@ const CategoryItem = ({item}) => {
 <Image src={item.img}/>
 <Info>
   <Title>{item.title}</Title>
-  <Button>SHOP NOW</Button>
+  
+  <Button><Link to="/productlist" className="shop--now">SHOP NOW</Link></Button>
 </Info>
     </Container>
   );

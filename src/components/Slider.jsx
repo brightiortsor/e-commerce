@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { mobile } from "../MediaQuery";
+import { landscape, mobile, tablet } from "../MediaQuery";
 import { SlideData } from "../pages/Data";
 
 const Container = styled.div`
@@ -14,6 +14,8 @@ const Container = styled.div`
   margin: 3rem 0 1rem 0;
   overflow: hidden;
   ${mobile({display: "none"})}
+  ${tablet({display: "none"})}
+  ${landscape({display: "none"})}
 `;
 
 const Arrow = styled.div`

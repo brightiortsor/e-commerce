@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../MediaQuery";
+import { landscape, mobile, tablet } from "../MediaQuery";
 
 const Container = styled.div`
   height: 30px;
@@ -12,6 +12,8 @@ const Container = styled.div`
   font-size: 14px;
   font-weight: 500;
   ${mobile({marginTop: "2.8rem", marginBottom: "-3rem"})}
+  ${tablet({marginTop: "2.8rem", fontSize: "1.2rem"})}
+  ${landscape({marginTop: "2.8rem", fontSize: "1.2rem"})}
 `;
 
 const FlashSales = () => {

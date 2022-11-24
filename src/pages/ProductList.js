@@ -11,6 +11,7 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ marginBottom: "10px" })}
 `;
 const Filter = styled.div`
   margin: 1.5rem;
@@ -21,12 +22,12 @@ const FilterText = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 20px;
-  ${mobile({ marginRight: "0" })}
+  ${mobile({ marginRight: "0", marginBottom: "5px" })}
 `;
 const Select = styled.select`
-  padding: 10px;
-  margin-right: 5px;
-  ${mobile({ margin: "5px", padding: "2px" })}
+  padding: 5px;
+  //margin-right: 5px;
+  ${mobile({ margin: "10px 0px 15px 5px" })}
 `;
 const Option = styled.option``;
 const ProductList = () => {

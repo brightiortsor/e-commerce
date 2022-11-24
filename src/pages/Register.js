@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobile } from "../MediaQuery";
+import { landscape, mobile } from "../MediaQuery";
 
 const Container = styled.div`
   width: 100vw;
@@ -21,8 +21,8 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 30px;
   background: #fff;
-
   ${mobile({ width: "75%" })}
+  ${landscape({ width: "85%" })}
 `;
 const Title = styled.h1`
   font-size: 1.5rem;
@@ -39,10 +39,17 @@ const Input = styled.input`
   padding: 10px;
   outline: none;
   font-size: 14px;
+  ${landscape({
+    minWidth: "50%",
+    fontSize: "1.5rem",
+    margin: "20px 5px 0 0",
+    padding: "10px",
+  })}
 `;
 const Disclaimer = styled.span`
   font-size: 12px;
   margin: 20px 0;
+  ${landscape({ fontSize: "1rem" })}
 `;
 const Button = styled.button`
   width: 40%;
@@ -53,6 +60,7 @@ const Button = styled.button`
   color: white;
   cursor: pointer;
   ${mobile({ width: "75%" })}
+  ${landscape({ width: "85%" })}
 `;
 const Register = () => {
   return (
